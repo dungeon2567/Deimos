@@ -1,0 +1,127 @@
+body {
+  font-family: sans-serif;
+  background: #ebf1f5;
+}
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
+  padding-top: 200px;
+}
+
+.data-table {
+  margin: 0 auto;
+  display: grid;
+}
+
+.data-table > .header {
+  display: contents;
+}
+
+.data-table > .header > .row {
+  display: contents;
+}
+
+.data-table > .header > .row > *:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
+
+.data-table > .body > .row > *:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
+
+.data-table > .header > .row > * {
+  border-color: rgba(16,22,26,.15);
+  border-style: solid;
+  border-width: 0;
+  background: #f5f8fa;
+  position: sticky;
+  display: flex;
+  align-content: center;
+  cursor: pointer;
+  top: 50px;
+  justify-content: space-between;
+}
+
+.data-table > .header > .row > *:hover {
+  background:#e1e8ed;
+}
+
+.data-table > .header > .row > *:hover > .arrow.hidden {
+  opacity: 0.5;
+}
+
+.data-table > .header > .row > * > .arrow.hidden {
+  opacity: 0;
+}
+
+.data-table > .header > .row:first-child > * {
+  border-top-width: 1px;
+}
+
+.data-table > .header > .row > * {
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  padding: 5px;
+}
+
+.data-table > .header > .row > *:first-child {
+  border-left-width: 1px;
+}
+
+.data-table > .header > .row > * {
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  padding: 5px;
+}
+
+.data-table > .header > .row > *:first-child {
+  border-left-width: 1px;
+}
+
+.data-table > .body {
+  display: contents;
+}
+
+.data-table > .body .row > * {
+  background-color: white;
+  border-color: rgba(16,22,26,.15);
+  border-width: 0;
+  border-style: solid;
+}
+
+.data-table > .body .row > * {
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  padding: 5px;
+}
+
+.data-table > .body .row > *:first-child {
+  border-left-width: 1px;
+}
+
+.data-table > .body .row:last-child > * {
+  border-bottom-width: 0;
+}
+
+.data-table > .body .row {
+  display: grid;
+  grid: subgrid;
+}
+
+.data-table > .footer {
+  position: sticky;
+  display: flex;
+  flex-wrap: center;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  background: #f5f8fa;
+  padding: 5px;
+  border: 1px solid rgba(16,22,26,.15);
+  z-index: 1;
+}
